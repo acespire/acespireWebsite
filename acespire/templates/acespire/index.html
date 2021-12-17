@@ -1,0 +1,139 @@
+{% load static %}
+{% url 'home_page' as home %}
+{% url 'products_page' as products %}
+{% url 'whyweare_page' as why %}
+{% url 'about_page' as about %}
+{% url 'career_page' as career %}
+{% url 'employee_page' as employee %}
+{% url 'research_page' as research %}
+{% url 'contact_page' as contact %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'acespire/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'acespire/css/header.css' %}">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-zrnmn8R8KkWl12rAZFt4yKjxplaDaT7/EUkKm7AovijfrQItFWR7O/JJn4DAa/gx" crossorigin="anonymous">
+    <title>Acespire Consulting</title>
+</head>
+<body>
+    
+            <!-- <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+              <a href="/" class="d-flex align-items-space-between mb-3 mb-md-0 ps-5 pt-2 me-md-auto">
+                <img src="{% static "acespire/logo.png" %}" width="200px"/>
+              </a>
+        
+              <ul class="nav nav-pills">
+                <li class="nav-item"><a href="{% url 'home_page' %}" class="nav-link {% if request.path == home %} active {% endif %}">Home</a></li>
+                <li class="nav-item"><a href="{% url 'products_page' %}" class="nav-link {% if request.path == products %} active {% endif %}">Products & Services</a></li>
+                <li class="nav-item"><a href="{% url 'whyweare_page' %}" class="nav-link {% if request.path == why %} active {% endif %}">Why We Are</a></li>
+                <li class="nav-item"><a href="{% url 'research_page' %}" class="nav-link {% if request.path == research %} active {% endif %}">Our Research</a></li>
+                <li class="nav-item"><a href="{% url 'about_page' %}" class="nav-link {% if request.path == about %} active {% endif %}">About Us</a></li>
+                <li class="nav-item"><a href="{% url 'career_page' %}" class="nav-link {% if request.path == career %} active {% endif %}">Career</a></li>
+                <li class="nav-item"><a href="{% url 'contact_page' %}" class="nav-link {% if request.path == contact %} active {% endif %}">Contact Us</a></li>
+                <li class="nav-item"><a href="{% url 'employee_page' %}" class="nav-link {% if request.path == employee %} active {% endif %}">Employee Portal</a></li>
+              </ul>
+            </header>
+         -->
+         <header>
+
+            <a href="{% url 'home_page' %}" class="logo">
+              <img src="{% static "acespire/logo.png" %}" width="175px"/>
+            </a>
+
+            <div class="menu">
+              <a href="{% url 'home_page' %}" class="nav-link {% if request.path == home %} active {% endif %}">Home</a>
+              <a href="{% url 'products_page' %}" class="nav-link {% if request.path == products %} active {% endif %}">Products & Services</a>
+              <a href="{% url 'whyweare_page' %}" class="nav-link {% if request.path == why %} active {% endif %}">Why We Are</a>
+              <a href="{% url 'research_page' %}" class="nav-link {% if request.path == research %} active {% endif %}">Our Research</a>
+              <a href="{% url 'about_page' %}" class="nav-link {% if request.path == about %} active {% endif %}">About Us</a>
+              <a href="{% url 'career_page' %}" class="nav-link {% if request.path == career %} active {% endif %}">Career</a>
+              <a href="{% url 'contact_page' %}" class="nav-link {% if request.path == contact %} active {% endif %}">Contact Us</a>
+              <a href="{% url 'employee_page' %}" class="nav-link {% if request.path == employee %} active {% endif %}">Employee Portal</a>
+            </div>
+
+         </header>
+
+
+         <script type="text/javascript">
+           window.addEventListener("scroll", function(){
+            var header = document.querySelector("header");
+            header.classList.toggle('sticky', window.scrollY > 100);
+                });
+         </script>
+
+
+        {% block content %}
+        {% endblock %}
+
+        <footer>  
+
+          <div class="footer-container">
+
+            <div class="footer-logo">
+              <img src="{% static "acespire/logo.png" %}" width="200px"/>
+            </div>
+
+            <div class="footer-about">
+              <i class="fas fa-map-marker-alt"></i>
+              <p>Acespire Consulting Solutions,<br>
+              2208 Riviera Drive, Little Elm,<br>
+              Texas - 75068
+              <br><br>
+              <i class="fab fa-whatsapp"></i><br>
+              972-672-9843
+              <br><br>
+              <i class="fas fa-at"></i><br>
+              contact@acespireconsulting.com</p>
+            </div>
+
+            <div class = "vertical"></div>
+
+            <div class="footer-links">
+              <div class="menu">
+                <a href="{% url 'home_page' %}" class="nav-link {% if request.path == home %} active {% endif %}">Home</a>
+                <a href="{% url 'products_page' %}" class="nav-link {% if request.path == products %} active {% endif %}">Products & Services</a>
+                <a href="{% url 'whyweare_page' %}" class="nav-link {% if request.path == why %} active {% endif %}">Why We Are</a>
+                <a href="{% url 'research_page' %}" class="nav-link {% if request.path == research %} active {% endif %}">Our Research</a>
+                <a href="{% url 'about_page' %}" class="nav-link {% if request.path == about %} active {% endif %}">About Us</a>
+                <a href="{% url 'career_page' %}" class="nav-link {% if request.path == career %} active {% endif %}">Career</a>
+                <a href="{% url 'contact_page' %}" class="nav-link {% if request.path == contact %} active {% endif %}">Contact Us</a>
+                <a href="{% url 'employee_page' %}" class="nav-link {% if request.path == employee %} active {% endif %}">Employee Portal</a>
+              </div>
+            </div>
+
+            <div class = "vertical2"></div>
+
+            <div class="footer-social">
+              <i class="fab fa-linkedin-in"></i>
+              <i class="fab fa-twitter"></i>
+              <i class="fab fa-facebook"></i>
+              <i class="fab fa-instagram"></i>
+              
+            </div>
+
+          </div>
+
+         
+
+         <!-- <div class = "horizontal"></div> -->
+
+         
+
+          <div class="cprt">
+            <h2>Copyright © 2018 Acespire Consulting Solutions. all rights reserved.</h2>
+          </div>
+
+        </footer>
+
+        
+    <!-- <script src="{% static 'acespire/js/jquery.js' %}" />
+    <script src="{% static 'acespire/js/popper.js' %}" />
+    <script src="{% static 'acespire/js/bootstrap.js' %}" />
+    <script type="text/javascript" src="{% static 'acespire/js/app.js' %}" />  -->
+    
+</body>
+</html>
