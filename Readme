@@ -1,0 +1,23 @@
+Install Pycharm or VS Code as tool to edit Python files.
+
+Phase-1:
+Step1: Install Django: $pip install django ↵
+Step2: $django-admin startproject DEMOPROJECT ↵
+Step3: Check the Djago Demoproject installed by $py manage.py runserver ↵
+Step4: $py manage.py startapp DEMOAPP ↵
+Step5: Open DEMOAPP/views.py
+Step6: Add "from django.http import HttpResponse" and add "def hi(request):
+    return HttpResponse('<h1> This is Home Page</h1>)" in the below
+Step7: Cretae new file in DEMOAPP as "urls.py"  and copy import and urlpattern from DEMOPROJECT/urls.py and paste.
+Step8: Map DEMOAPP/urls.py to DEMOPROJECT/urls.py by adding below code in DEMOPROJECT/urls.py ",include" after the import path and add urlpattern as "path('', include('DEMOAPP.urls'))"
+Step9:Check your website is running with "THIS IS MY HOME PAGE" by $py manage.py runserver ↵
+Step10: All setup is done and we can start develop on our requirement project.
+
+Phase-2:
+Step1: Create a new directory within DEMOAPP to write our own code, so it wil be the specific template to this project and Django will look into this templates.
+Step2: Create new directory within templates as DEMOAPP
+Step3: Create new html file within template/DEMOAPP
+Step4: Goto DEMOAPP/apps.py files and copy the name of class in the file.
+Step5: Goto DEMOPROJECT/settings.py files and go to installed app section add "DEMOAPP.apps.DemoappConfig"
+Step6: Goto Open DEMOAPP/views.py and replace code return HttpResponse('<h1> This is Home Page</h1>) to "return render(request,'DEMOAPP/index.html')"
+Step7: Now lets start our exact development from here.
