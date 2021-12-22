@@ -1,7 +1,178 @@
 {% extends 'acespire/index.html' %}
-
+{% load static %}
 {% block content %}
-    <div class="text-center">
-        <h1>PRODUCTS & SERVICES</h1>
+
+<style>
+    h5 {
+      color: #04132a;
+    }
+    .carousel-caption p {
+        color: #fff;
+    }
+    </style>
+
+    <!-- Products & Services -->
+
+    <!-- IMAGE BANNER -->
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'acespire/header_bg.jpg' %}"" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-caption d-none d-md-block align-self-end">
+        <h5 class="fs-1 text-end">Products & Services</h5>
+        <p class="fs-4 text-end">We dream to serve our customers by providing a helping<br>
+            hands to grow our customers business.</p>
+      </div>
     </div>
+  </div>
+
+  <!-- END IMAGE BANNER -->
+
+ <!-- SERVICES -->
+                                
+ <section class="row w-100 py-0 bg-light" id="features">
+    <div class="col-lg-6 col-img"></div>
+    <div class="col-lg-6 py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+                    <h6 class="text-primary">WHY TO CHOOES US</h6>
+                    <h1>Best solution for your business</h1>
+                    <p></p>
+
+                    <div class="feature d-flex mt-5">
+                        <div class="iconbox me-3">
+                            <i class='bx bxs-cloud-upload'></i>
+                        </div>
+                        <div>
+                            <h5>Cloud Technologies</h5>
+                            <p>We area AWS Cloud Services consulting firm.Being AWS
+                                registered partnerin the region, we have the capabilities to build,
+                                deploy, and manage enterprise infrastructure in AWS.Our
+                                professionals are equipped to provide IT strategy and roadmap
+                                for AWS Consulting...</p>
+                        </div>
+                    </div>
+                    <div class="feature d-flex">
+                        <div class="iconbox me-3">
+                            <i class='bx bxs-server'></i>
+                        </div>
+                        <div>
+                            <h5>Digital Transformation</h5>
+                            <p>Digitalization is rapidly transforming how companies operate and
+                                the way they go to market. The Internet of Things (IoT), big data,
+                                embedded sensors and geo-spatial tracking are just a few of the
+                                technologies companies are using to gain greater customer
+                                insights,.. </p>
+                        </div>
+                    </div>
+                    <div class="feature d-flex">
+                        <div class="iconbox me-3">
+                            <i class='bx bxs-network-chart'></i>
+                        </div>
+                        <div>
+                            <h5>Supply Chain</h5>
+                            <p>With focus on providing the best inventory and logistics solutions,
+                                our consultants provide innovative solutions to reduce the lag and
+                                keep the chain smooth. We have worked on providing solution to
+                                reduce the hops and turn the inventory into finished goods
+                                without any...  </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+                                                 
+<!-- SERVICES END-->
+
+
+<!-- PROJECTS -->
+                                                 
+<section id="portfolio">
+    <div class="container-fluid">
+        <div class="row mb-5">
+            <div class="col-md-8 mx-auto text-center">
+                <h6 class="text-primary">PROJECTS</h6>
+                <h1>Our Recent Work</h1>
+                <p></p>
+            </div>
+        </div>
+        <div class="row g-3">
+            <div class="col-lg-4 col-sm-6">
+                <div class="project">
+                    <img src="https://media.istockphoto.com/photos/financial-data-analyst-using-ai-picture-id1296686780" alt="">
+                    <div class="overlay">
+                        <div>
+                            <h4 class="text-white">Cloud Technologies</h4>
+                            <h6 class="text-white"></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="project">
+                    <img src="https://media.istockphoto.com/photos/connection-network-in-dark-servers-data-center-room-storage-systems-picture-id1197646065" alt="">
+                    <div class="overlay">
+                        <div>
+                            <h4 class="text-white">Digital Transformation</h4>
+                            <h6 class="text-white"></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="project">
+                    <img src="https://images.pexels.com/photos/270360/pexels-photo-270360.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940 alt="">
+                    <div class="overlay">
+                        <div>
+                            <h4 class="text-white">Supply Chain</h4>
+                            <h6 class="text-white"></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="project">
+                    <img src="https://images.pexels.com/photos/7788006/pexels-photo-7788006.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                    <div class="overlay">
+                        <div>
+                            <h4 class="text-white">Data Integration</h4>
+                            <h6 class="text-white"></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="project">
+                    <img src="https://images.pexels.com/photos/210607/pexels-photo-210607.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                    <div class="overlay">
+                        <div>
+                            <h4 class="text-white">Project Title</h4>
+                            <h6 class="text-white"></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="project">
+                    <img src="https://images.pexels.com/photos/186461/pexels-photo-186461.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                    <div class="overlay">
+                        <div>
+                            <h4 class="text-white">Project Title</h4>
+                            <h6 class="text-white"></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PROJECTS END-->
+
+
 {% endblock %}
